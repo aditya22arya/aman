@@ -1,15 +1,22 @@
-import React from "react";
-import styles from "./page.module.scss"
+import React, { useState } from "react";
+import styles from "./page.module.scss";
 import Card from "../components/card";
 
 const Page = () => {
+  // State to manage the toggle of the hamburger menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Toggle function
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className={styles.container}>
       {/* Navbar */}
       <nav className={styles.navbar}>
-        <div className={styles.logo}>
-          <img src="/Vector.svg" alt="" />ProVital</div>
-        <ul className={styles.navLinks}>
+        <div className={styles.logo}> <img src="/Vector.svg" alt="Logo" />ProVital</div>
+        <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
           <li>List your practice</li>
           <li>For Employers</li>
           <li>Courses</li>
@@ -18,6 +25,12 @@ const Page = () => {
           <li>Doctors</li>
           <li>Login / Signup</li>
         </ul>
+        {/* Hamburger Icon */}
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
       </nav>
 
       {/* Hero Section */}

@@ -2,7 +2,6 @@
   font-family: Arial, sans-serif;
   color: #333;
   padding: 0 20px;
-
   background-color: #fff;
 
   @media (max-width: 768px) {
@@ -20,9 +19,9 @@
   .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #007bff;
+    color: #000;
     display: flex;
-    gap :5%;
+    gap:10%;
   }
 
   .navLinks {
@@ -42,7 +41,30 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+      display: none; /* Hidden by default on mobile */
     }
+  }
+
+  .hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+    }
+
+    @media (max-width: 768px) {
+      display: flex; /* Display hamburger on mobile */
+    }
+  }
+
+  /* When menu is active, show navLinks */
+  .navLinks.active {
+    display: flex;
   }
 }
 
@@ -52,10 +74,9 @@
 
   .heroText {
     text-align: right;
-      padding:5%;
+    padding: 5%;
     h1 {
       font-size: 36px;
-      
 
       span {
         color: #007bff;
@@ -66,9 +87,6 @@
       font-size: 18px;
       margin-top: 10px;
       color: #666;
-      // text-align: right;
-      // padding: 5%;
-      // margin-top: -10%;
     }
 
     @media (max-width: 768px) {
@@ -96,7 +114,6 @@
       flex: 1;
       border: 1px solid #E7E7E7;
       background-color: #F9FAFB;
-
       border-radius: 5px;
     }
 
@@ -113,9 +130,10 @@
       flex-direction: column;
       gap: 15px;
 
-      input{
-        width: 93%;
+      input {
+        width: 95.8%;
       }
+
       button {
         width: 100%;
       }
@@ -139,7 +157,7 @@
 
     span {
       font-weight: bold;
-      color:linear-gradient(115deg, #5efce8, #736efe);;
+      color: linear-gradient(115deg, #5efce8, #736efe);
     }
   }
 
@@ -156,7 +174,7 @@
       border-radius: 20px;
       background: none;
       cursor: pointer;
-      color:#707070;
+      color: #707070;
 
       &.active {
         background-color: #000;
