@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './card.module.scss';
+import styles from"./card.module.scss";
 
 interface CardProps {
   image: string;
