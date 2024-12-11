@@ -1,27 +1,26 @@
-import React from 'react';
-import styles from"./card.module.scss";
+import React from "react";
+import styles from "./card.module.scss";
 
 interface CardProps {
   image: string;
   title: string;
   description: string;
-  stat: string;
+  icon: string;
+  iconText: string;
 }
 
-const Card: React.FC<CardProps> = ({ image, title, description, stat }) => {
+const Card: React.FC<CardProps> = ({ image, title, description, icon, iconText }) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageWrapper}>
-        <img src={image} alt={title} className={styles.image} />
-        <div className={styles.statBadge}>
-          <span role="img" aria-label="Heart">
-            💙
-          </span>
-          {stat}
+        <img src={image} alt={title} />
+        <div className={styles.iconBadge}>
+          <span className={styles.icon}>{icon}</span>
+          <span className={styles.iconText}>{iconText}</span>
         </div>
       </div>
       <div className={styles.content}>
-        <h4>{title}</h4>
+        <h3>{title}</h3>
         <p>{description}</p>
       </div>
     </div>
