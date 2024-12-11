@@ -1,0 +1,344 @@
+.container {
+    font-family: Arial, sans-serif;
+    padding: 0 20px;
+    background-color: #fff; // Set background color to white
+    color: #333;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  
+    .logo {
+      display: flex;
+      align-items: center;
+  
+      img {
+        height: 30px;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+    }
+  
+    .navLinks {
+      display: flex;
+      gap: 20px;
+  
+      a {
+        text-decoration: none;
+        color: #555;
+        font-size: 1rem;
+  
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  
+    .navToggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  
+    &.navOpen {
+      .navLinks {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none;
+    }
+  
+    .navToggle {
+      display: block;
+    }
+  }
+  
+  /* Header Section */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #0073e6, #ffa500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  
+      span {
+        color: #0073e6;
+      }
+    }
+  
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-top: 10px;
+      text-align: justify; // Ensure proper alignment
+    }
+  
+    .searchBar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      background: #ffffff;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 10px;
+  
+      .inputContainer {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        background: #f5f5f5;
+        border-radius: 8px;
+        gap: 8px;
+        flex: 1;
+        border: 1px solid #ddd;
+  
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          font-size: 1rem;
+          color: #333;
+          width: 100%;
+        }
+  
+        .icon {
+          color: #aaa;
+          font-size: 1.2rem;
+        }
+      }
+  
+      button {
+        background: linear-gradient(90deg, #0073e6, #005bb5);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+  
+        &:hover {
+          background: linear-gradient(90deg, #005bb5, #003f80);
+        }
+  
+        .buttonIcon {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  
+  /* How It Works Section */
+  .howItWorks {
+    text-align: center;
+  
+    h2 {
+      font-size: 1.8rem;
+      background: linear-gradient(90deg, #ffa500, #ff4500);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+  
+    h3 {
+      font-size: 1.4rem;
+      margin: 15px 0 25px;
+      font-weight: normal;
+      text-align: justify; // Align text according to PNG
+    }
+  
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+  
+      button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &.activeTab {
+          background-color: #0073e6;
+          color: white;
+          font-weight: bold;
+        }
+  
+        &.inactiveTab {
+          background-color: #f0f0f0;
+          color: #333;
+  
+          &:hover {
+            background-color: #e0e0e0;
+          }
+        }
+      }
+    }
+  
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      padding: 20px 0;
+  
+      .cardContainer {
+        display: flex;
+        gap: 16px;
+        transition: transform 0.5s ease-in-out;
+      }
+  
+      .nextButton {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background: #0073e6;
+        color: white;
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+        &:hover {
+          background-color: #005bb5;
+        }
+      }
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      h1 {
+        font-size: 2rem;
+      }
+  
+      p {
+        font-size: 1rem;
+      }
+  
+      .searchBar {
+        flex-direction: column;
+  
+        .inputContainer {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+  
+        button {
+          width: 100%;
+        }
+      }
+    }
+  
+    .howItWorks {
+      h2 {
+        font-size: 1.5rem;
+      }
+  
+      h3 {
+        font-size: 1.2rem;
+      }
+  
+      .tabs {
+        flex-wrap: wrap;
+  
+        button {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+      }
+  
+      .carousel {
+        .nextButton {
+          width: 40px;
+          height: 40px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header {
+      h1 {
+        font-size: 1.8rem;
+      }
+  
+      .searchBar {
+        .inputContainer {
+          font-size: 0.9rem;
+        }
+  
+        button {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  
+    .howItWorks {
+      h2 {
+        font-size: 1.2rem;
+      }
+  
+      h3 {
+        font-size: 1rem;
+      }
+  
+      .tabs {
+        button {
+          font-size: 0.8rem;
+        }
+      }
+  
+      .carousel {
+        .nextButton {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  
