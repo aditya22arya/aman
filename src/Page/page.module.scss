@@ -58,11 +58,11 @@
     }
 
     @media (max-width: 768px) {
-      display: flex; /* Display hamburger on mobile */
+      display: flex; 
     }
   }
 
-  /* When menu is active, show navLinks */
+  
   .navLinks.active {
     display: flex;
   }
@@ -79,7 +79,18 @@
       font-size: 36px;
 
       span {
-        color: #007bff;
+        --angle: 45deg; /* Optional: can redefine it at the component level if needed */
+      background: linear-gradient(
+        var(--angle), 
+        oklab(44.6% -0.039 -0.03), 
+        oklab(56.3% -0.044 -0.048), 
+        oklab(70% -0.056 -0.022), 
+        oklab(82.3% -0.068 -0.003), 
+        oklab(89.9% -0.032 -0.008)
+      );
+      -webkit-background-clip: text; /* Clips the gradient to the text */
+      -webkit-text-fill-color: transparent; 
+
       }
     }
 
@@ -92,9 +103,11 @@
     @media (max-width: 768px) {
       h1 {
         font-size: 28px;
+        text-align: left;
       }
 
       p {
+        text-align: left;
         font-size: 16px;
       }
     }
@@ -124,7 +137,11 @@
       color: #fff;
       border-radius: 5px;
       cursor: pointer;
+      display: flex;
+      font-weight: bold;
+      gap: 7px;
     }
+
 
     @media (max-width: 768px) {
       flex-direction: column;
@@ -144,27 +161,46 @@
 .cardSection {
   margin-top: 60px;
 
+
   h2 {
-    font-size: 24px;
-    text-align: center;
-    color: #666;
+    font-size: 10px;
+    text-align: left;
+    color: #707070;
+    padding-left: 5%;
   }
 
   h3 {
     font-size: 20px;
-    text-align: center;
+    text-align: left;
+    padding-left: 5%;
     margin-top: 10px;
+    color: #707070;
+    // display: flex;
+    // flex-direction: row;
+
+    h4{
+      opacity: 1;
+      margin-left: 90%;
+      margin-top: -1%;
+      background-color: #fff;
+      box-shadow: #707070;   
+      border-radius: 50%;
+      font-size: 25px;   
+    }
 
     span {
       font-weight: bold;
-      color: linear-gradient(115deg, #5efce8, #736efe);
+      background: linear-gradient(45deg, #E88C4A, #E07A37, #D86825, #CC5613);
+      -webkit-background-clip: text; 
+      -webkit-text-fill-color: transparent; 
     }
   }
 
   .pillButtons {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 10px;
+    padding-left:5%;
     margin-top: 20px;
     flex-wrap: wrap;
 
@@ -190,6 +226,9 @@
     justify-content: center;
 
     @media (max-width: 768px) {
+      h4{
+        opacity: 0;
+      }
       flex-direction: column;
       gap: 15px;
     }

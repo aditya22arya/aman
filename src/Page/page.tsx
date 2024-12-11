@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.scss";
 import Card from "../components/card";
-
+import { BiArrowFromLeft, BiSearch,BiArrowFromRight } from "react-icons/bi";
 const Page = () => {
   // State to manage the toggle of the hamburger menu
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,6 +33,7 @@ const Page = () => {
         </div>
       </nav>
 
+      
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroText}>
@@ -45,15 +46,16 @@ const Page = () => {
           <input type="text" placeholder="Condition, procedure, specialty..." />
           <input type="text" placeholder="City, state, or zipcode" />
           <input type="text" placeholder="Insurance carrier" />
-          <button>Find now</button>
+          <button><span><BiSearch/></span>Find now</button>
         </div>
       </section>
-
+      
       {/* Card Section */}
       <section className={styles.cardSection}>
         <h2>HOW IT WORKS</h2>
         <h3>
           <span>Lifestyle as medicine:</span> The six pillars
+          <h4><BiArrowFromRight/><BiArrowFromLeft/></h4>
         </h3>
         <div className={styles.pillButtons}>
           <button className={styles.active}>Nutrition</button>
