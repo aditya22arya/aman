@@ -7,7 +7,8 @@ const Page = () => {
     <div className={styles.container}>
       {/* Navbar */}
       <nav className={styles.navbar}>
-        <div className={styles.logo}>ProVital</div>
+        <div className={styles.logo}>
+          <img src="/Vector.svg" alt="" />ProVital</div>
         <ul className={styles.navLinks}>
           <li>List your practice</li>
           <li>For Employers</li>
@@ -23,7 +24,7 @@ const Page = () => {
       <section className={styles.hero}>
         <div className={styles.heroText}>
           <h1>
-            Book an appointment with <span>lifestyle medicine</span> experts
+            Book an appointment with <br /><span>lifestyle medicine</span> experts
           </h1>
           <p>Optimize your lifestyle and reverse chronic diseases.</p>
         </div>
@@ -51,21 +52,21 @@ const Page = () => {
         </div>
         <div className={styles.cards}>
           <Card
-            image="/path-to-nutrition-image.jpg"
+            image="/Rectangle 152.png"
             title="Nutrition"
             description="Evidence supports the use of a whole food, plant-predominant diet to prevent, treat, and reverse chronic illness."
-            icon="❤️"
+            icon="❤"
             iconText="121/80 mmHg"
           />
           <Card
-            image="/path-to-physical-activity-image.jpg"
+            image="/Rectangle 154.png"
             title="Physical activity"
             description="Regular physical activity is key to managing weight, improving mental health, and reducing risk of chronic disease."
-            icon="⏱️"
+            icon="⏱"
             iconText="32 minutes"
           />
           <Card
-            image="/path-to-sleep-image.jpg"
+            image="/Rectangle 156.png"
             title="Restorative sleep"
             description="Consistent, quality sleep is vital to restoring function and physical health."
             icon="🛌"

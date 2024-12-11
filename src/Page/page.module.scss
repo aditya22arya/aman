@@ -21,6 +21,8 @@
     font-size: 24px;
     font-weight: bold;
     color: #007bff;
+    display: flex;
+    gap :5%;
   }
 
   .navLinks {
@@ -49,8 +51,11 @@
   text-align: center;
 
   .heroText {
+    text-align: right;
+      padding:5%;
     h1 {
       font-size: 36px;
+      
 
       span {
         color: #007bff;
@@ -61,6 +66,9 @@
       font-size: 18px;
       margin-top: 10px;
       color: #666;
+      // text-align: right;
+      // padding: 5%;
+      // margin-top: -10%;
     }
 
     @media (max-width: 768px) {
@@ -95,7 +103,7 @@
     button {
       padding: 10px 20px;
       border: none;
-      background-color: #007bff;
+      background: linear-gradient(115deg, #5efce8, #736efe);
       color: #fff;
       border-radius: 5px;
       cursor: pointer;
@@ -103,9 +111,11 @@
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 10px;
+      gap: 15px;
 
-      input,
+      input{
+        width: 93%;
+      }
       button {
         width: 100%;
       }
@@ -129,7 +139,7 @@
 
     span {
       font-weight: bold;
-      color: #007bff;
+      color:linear-gradient(115deg, #5efce8, #736efe);;
     }
   }
 
